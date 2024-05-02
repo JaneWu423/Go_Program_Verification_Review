@@ -1,5 +1,23 @@
 # Go Program Verification Survey
 
+## Problem Statement
+
+The Go programming language has gained widespread popularity due to its robust support for concurrency, allowing developers to create scalable and efficient applications. However, the same concurrency features that make Go powerful can lead to subtle and complex bugs that are difficult to detect with traditional verification methods. These concurrency-related issues can cause unexpected behavior, data races, and system crashes, which pose significant risks to software reliability and safety. Given the critical role of concurrency in Go programs, there is a need for effective verification tools to ensure the correctness and robustness of Go code. The project conducts a literature review on recent go program verification tools, especially focusing on the concurrency side of the language, aiming to explore various existing solutions, analyze current limitations, and propose future directions.
+
+## Project Design
+
+1. Explore current existing verification tools for Go programs, find the most recent and SOTA ones for further analysis.
+2. Construct Benchmarking test codes and test the chosen tools's performance on this test set.
+3. Analyze the result and identify limitations of each.
+
+## Research Methodology
+
+**Data Collection**: Gathered information from a variety of sources, including academic papers, tool documentation, and official Go resources.
+
+**Tool Evaluation**: Evaluated the selected verification tools based on the compiled benchmark test set that contains synthetic buggy programs covering most concurrency primitives in Go.
+
+**Analysis on result**: Create visualize of testing results. Highlighted common trends and difference between various tools. Produce final analysis on current limitation as well as possible future directions.
+
 ## Report
 
 [Link to final report](https://drive.google.com/file/d/1s9EwFdTi4Ei-Wyz3sFiAfQKNJMud1fR7/view?usp=sharing)
