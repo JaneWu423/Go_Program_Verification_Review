@@ -1,4 +1,15 @@
-# Benchmark Maker
+# Go Program Verification Survey
+
+## Report
+
+[Link to final report]()
+
+## Slides & Video
+
+[Link to final presentation slides]()
+[Link to final presentation video]()
+
+## Go verification tool benchmark set
 
 This project is adapted from [benchmark-maker](https://github.com/nicolasdilley/benchmark-maker)
 
@@ -11,7 +22,7 @@ contexts, programs with holes, with 3 different code elements:
 2.  A code snippet that contains a bug related to concurrency primitive from 1.
 3.  A potential bound.
 
-## Installation
+### Installation
 
 Mac Sillicon likely does not work, Linux system is prefered for reproducing the result.
 
@@ -20,7 +31,9 @@ To build the tool the Go ecosystem is required, also need to build and configure
 To install Go, follow the instructions [here](https://go.dev/doc/install).
 
 To install Godel2, follow instructions [here](https://github.com/jujuyuki/godel2).
+
 To install Gomela, follow instructions [here](https://github.com/nicolasdilley/Gomela).
+
 To install GCatch, follow instructions [here](https://github.com/system-pclub/GCatch/tree/master/GCatch).
 
 If you already have everything installed, simply clone this repo.
@@ -31,13 +44,13 @@ and build the tool.
 
 `go get && go build`
 
-## Usage
+### Usage
 
 To synthesize programs, Benchmark Maker requires two folders which contain two
 different code elements, the first containing the contexts and the second
 which contains the code snippets. The repo contains example snippets and contexts you can direcly use.
 
-### Contexts
+#### Contexts
 
 A context is a program which contains holes for the declaration of concurrency
 primitives (CP) , code snippets (CS) and a potential bound (bound).
@@ -56,7 +69,7 @@ programs with bounds of `10 000` and `len(os.Args)`for example.
 
 A set of contexts can be found in the `contexts` folder.
 
-### Code snippets
+#### Code snippets
 
 The only two requirements for code snippets are to declared which concurrency
 primitive they use and to use specific names for the variables of the
@@ -69,7 +82,7 @@ concurrency primitives. This is achieved by commenting at the top:
 
 note: Godel2 and GCatch does not support Waitgroup yet...
 
-### Generating and verifying a set of synthetic programs
+#### Generating and verifying a set of synthetic programs
 
 The tool expects as argument the folder containing the contexts followed by
 the folder containing the code snippets.
