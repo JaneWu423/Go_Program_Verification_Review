@@ -2,12 +2,12 @@
 
 ## Report
 
-[Link to final report]()
+[Link to final report](https://drive.google.com/file/d/1s9EwFdTi4Ei-Wyz3sFiAfQKNJMud1fR7/view?usp=sharing)
 
 ## Slides & Video
 
-[Link to final presentation slides]()
-[Link to final presentation video]()
+[Link to final presentation slides](https://docs.google.com/presentation/d/1sk0kwad6LC25e0SmVphqnju-OzF8olPDrRY_9kQW-4Q/edit?usp=sharing)
+[Link to final presentation video](https://drive.google.com/file/d/1Xecj6IaEv-FjXSxOVF7ufmGWuac3ZwS4/view?usp=sharing)
 
 ## Go verification tool benchmark set
 
@@ -49,6 +49,22 @@ and build the tool.
 To synthesize programs, Benchmark Maker requires two folders which contain two
 different code elements, the first containing the contexts and the second
 which contains the code snippets. The repo contains example snippets and contexts you can direcly use.
+
+<details>
+<summary>example code snippets</summary>
+
+![](./snippet.png)
+
+</details>
+<details>
+<summary>example context code</summary>
+
+![](./context.png)
+![](./context1.png)
+![](./context2.png)
+![](./context3.png)
+
+</details>
 
 #### Contexts
 
@@ -107,3 +123,68 @@ The verification results are:
 2. `\xmark` for no bug reported.
 3. `\crash` which reports that the tool crashed.
 4. `\nosupport` which reports that the tool reported that it did not support the benchmark.
+
+### Results
+
+![](./pie.png)
+
+<details>
+<summary>Detailed test results</summary>
+
+<details>
+<summary>No-op (no bug) programs</summary>
+
+![](./no.png)
+
+- dagger symbol mean not support, circle means true negative
+
+</details>
+
+<details>
+<summary>Results for blocking channel bugs</summary>
+
+![](./ch1.png)
+![](./ch2.png)
+
+- dagger symbol means not support, check means true positive, cross means false negative
+
+</details>
+
+<details>
+<summary>Results for channel safety errors</summary>
+
+![](./ch_safe.png)
+
+- dagger symbol mean not support, check true positive, cross false negative
+
+</details>
+
+<details>
+<summary>Results for mutexes errors</summary>
+
+![](./mutex.png)
+![](./mutex1.png)
+
+- dagger symbol means not support, check means true positive, cross means false negative
+
+</details>
+
+<details>
+<summary>Results for RWMutex safety errors</summary>
+
+![](./rw.png)
+
+- dagger symbol means not support, check means true positive, cross means false negative
+
+</details>
+
+<details>
+<summary>Results for Waitgroup errors</summary>
+
+![](./wg.png)
+
+- dagger symbol means not support, check means true positive, cross means false negative, dash means not tested since not supported
+
+</details>
+
+</details>
